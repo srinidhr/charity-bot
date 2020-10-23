@@ -1,0 +1,6 @@
+{
+    "webhookUrl": “<your_server_url>“,
+    "token" : “<your_bot_token>”,
+    "botEmail": “<your_bot_email>“,
+    "port": <your_preferred_port>
+}

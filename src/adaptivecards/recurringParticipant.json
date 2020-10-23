@@ -1,0 +1,44 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "altText": "",
+                            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png",
+                            "size": "Medium"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Cisco Manager Charity Match Drive 2019",
+            "weight": "Bolder",
+            "size": "Medium",
+            "horizontalAlignment": "Center",
+            "spacing": "Medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "It looks like you have already contributed to Cisco's 2019 Charity Match Drive,",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Thank You, for your participation.",
+            "wrap": true,
+            "weight": "Bolder",
+            "horizontalAlignment": "Center"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
