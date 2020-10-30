@@ -16,13 +16,13 @@ const headers = { Authorization: "Bearer " + config.token };
 
 // Object to store user input values which go into the DB
 var cardDetails = {
+  //"_id": '',
+  //"charityname": '',
   "amount": '',
-  "charityname": '',
   "user": '',
   "business_unit": '',
   "email": '',
   "hash": '',
-  "_id": '',
   "date": ''
 }
 
@@ -72,8 +72,8 @@ function thankyouCard_Employees(thankyouCard_Employee, key) {
         if (property === key) {
           if (thankyouCard_Employee[property] === 'Amount :')
             thankyouCard_Employee['value'] = "$" + cardDetails.amount;
-          else if (thankyouCard_Employee[property] === 'Charity Name :')
-            thankyouCard_Employee['value'] = cardDetails.charityname;
+          // else if (thankyouCard_Employee[property] === 'Charity Name :')
+          //   thankyouCard_Employee['value'] = cardDetails.charityname;
           else if (thankyouCard_Employee[property] === 'Business Unit :')
             thankyouCard_Employee['value'] = cardDetails.business_unit;
         }
@@ -174,17 +174,17 @@ module.exports = app => {
         console.log(result.data);
         switch (result.data.inputs.buttonId) {
           case "employeeBtn":
-            cardDetails.user = "employee";
+            cardDetails.user = "Employee";
             sendCard(result.data, detailsCard_Employee);
             break;
           case "managerBtn":
-            cardDetails.user = "manager"
+            cardDetails.user = "Manager"
             sendCard(result.data, detailsCard_Manager);
             break;
           case "detailsSubmit":
-            if (!isNumeric(result.data.inputs.amountInput)) {
+            if (!isNumeric(result.data.inputs.amountInput) || (result.data.inputs.amountInput) < 0) {
               webex.messages.create({
-                markdown: 'The **amount** entered is not a number. Please enter a number and re-submit the form.',
+                markdown: 'The **amount** entered is not accurate. Please enter the amount and re-submit the form.',
                 roomId: result.data.roomId,
               })
             }
@@ -199,23 +199,23 @@ module.exports = app => {
                   cardDetails.hash = crypto.createHash('sha256').update(cardDetails.email).digest('hex');
                   cardDetails.amount = result.data.inputs.amountInput;
                   cardDetails.date = Date(Date.now()).toString();
-                  cardDetails.charityname = result.data.inputs.preferredCharity;
                   cardDetails.business_unit = result.data.inputs.businessUnit;
-                  if (!cardDetails.charityname) {
-                    cardDetails.charityname = "-- No Preference --";
-                  }
+                  //cardDetails.charityname = result.data.inputs.preferredCharity;
+                  // if (!cardDetails.charityname) {
+                  //   cardDetails.charityname = "-- No Preference --";
+                  // }
                   const charitycontribution_storage = new Charitycontribution({
                     email: cardDetails.hash,
                     type_of_contributor: cardDetails.user,
                     business_unit: cardDetails.business_unit,
                     contribution_amount_in_dollars: cardDetails.amount,
-                    charity_name: cardDetails.charityname,
                     date: cardDetails.date
+                    //charity_name: cardDetails.charityname
                   });
                   charitycontribution_storage.save()
                     .then(mongoDbResult => {
                       console.log('Data Updated');
-                      if (cardDetails.user == "employee") {
+                      if (cardDetails.user == "Employee") {
                         thankyouCard_Employees(thankyouCard_Employee, 'title');
                         sendCard(result.data, thankyouCard_Employee);
                       }

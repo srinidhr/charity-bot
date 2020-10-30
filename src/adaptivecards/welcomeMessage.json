@@ -21,7 +21,7 @@
         },
         {
             "type": "TextBlock",
-            "text": "Cisco Manager Charity Match Drive 2019",
+            "text": "Cisco Manager Charity Match Drive 2020",
             "weight": "Bolder",
             "size": "Medium",
             "horizontalAlignment": "Center",
@@ -29,7 +29,7 @@
         },
         {
             "type": "TextBlock",
-            "text": "Hello!! Welcome to Cisco's 2019 Charity Match Drive. My name is Charity Bot.",
+            "text": "Hello!! Welcome to Cisco's 2020 Charity Match Drive. My name is Charity Bot.",
             "wrap": true
         },
         {

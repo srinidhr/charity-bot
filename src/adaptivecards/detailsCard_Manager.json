@@ -21,7 +21,7 @@
         },
         {
             "type": "TextBlock",
-            "text": "Cisco Manager Charity Match Drive 2019",
+            "text": "Cisco Manager Charity Match Drive 2020",
             "weight": "Bolder",
             "size": "Medium",
             "horizontalAlignment": "Center",
@@ -34,7 +34,7 @@
         },
         {
             "type": "TextBlock",
-            "text": "How much have/will you donate in calendar year 2019?",
+            "text": "How much have/will you donate in calendar year 2020?",
             "spacing": "Medium",
             "horizontalAlignment": "Center"
         },
@@ -49,7 +49,7 @@
         },
         {
             "type": "TextBlock",
-            "text": "*Please reply in dollars and cents.",
+            "text": "*Please reply in US dollars and cents.",
             "size": "Small",
             "weight": "Lighter"
         },
@@ -62,64 +62,56 @@
             "placeholder": "",
             "choices": [
                 {
-                    "title": "Sri’s staff",
-                    "value": "Sri’s staff"
+                    "title": "Jeetu’s staff",
+                    "value": "Jeetu’s staff"
                 },
                 {
-                    "title": "Amy’s staff",
-                    "value": "Amy’s staff"
+                    "title": "Javed’s staff",
+                    "value": "Javed’s staff"
                 },
                 {
-                    "title": "Strategy & Planning (Pegah)",
-                    "value": "Strategy & Planning (Pegah)"
+                    "title": "Infrastructure (Radhika)",
+                    "value": "Infrastructure (Radhika)"
                 },
                 {
-                    "title": "UCTG (Hakim)",
-                    "value": "UCTG (Hakim)"
+                    "title": "Calling & Strategy (Lorrissa)",
+                    "value": "Calling & Strategy (Lorrissa)"
                 },
                 {
-                    "title": "CTG CTO (Cullen)",
-                    "value": "CTG CTO (Cullen)"
-                },
-                {
-                    "title": "Marketing (Aruna)",
-                    "value": "Marketing (Aruna)"
-                },
-                {
-                    "title": "Calling (Javed)",
-                    "value": "Calling (Javed)"
-                },
-                {
-                    "title": "Contact Center (Omar)",
-                    "value": "Contact Center (Omar)"
-                },
-                {
-                    "title": "TCG CTO (Anurag)",
-                    "value": "TCG CTO (Anurag)"
+                    "title": "Devices (Snorre)",
+                    "value": "Devices (Snorre)"
                 },
                 {
                     "title": "Meetings (Abhay)",
                     "value": "Meetings (Abhay)"
                 },
                 {
-                    "title": "Teams (Lorrissa)",
-                    "value": "Teams (Lorrissa)"
+                    "title": "BD & Online (Sandeep)",
+                    "value": "BD & Online (Sandeep)"
                 },
                 {
-                    "title": "Devices (Sandeep)",
-                    "value": "Devices (Sandeep)"
+                    "title": "Contact Center (Omar)",
+                    "value": "Contact Center (Omar)"
                 },
                 {
-                    "title": "Platform (Panos)",
-                    "value": "Platform (Panos)"
+                    "title": "Marketing (Aruna)",
+                    "value": "Marketing (Aruna)"
                 },
                 {
-                    "title": " I don’t know! Just take my input!",
-                    "value": " I don’t know! Just take my input!"
+                    "title": "CTO (Anurag)",
+                    "value": "CTO (Anurag)"
+                },
+                {
+                    "title": "CTO (Cullen)",
+                    "value": "CTO (Cullen)"
+                },
+                {
+                    "title": "Other",
+                    "value": "Other"
                 }
             ],
             "id": "businessUnit",
-            "value": "Amy’s staff",
+            "value": "Jeetu’s staff",
             "wrap": true
         },
         {
